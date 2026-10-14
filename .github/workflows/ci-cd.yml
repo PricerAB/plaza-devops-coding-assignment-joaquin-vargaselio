@@ -82,6 +82,7 @@ jobs:
       # ADDED - TODO: Add step(s) to install/upgrade the application by terraform in the Kubernetes cluster here
       - name: Deploy application via Terraform
         run: |
-          cd infrastructure
+          cd services
           terraform init
+          terraform validate
           terraform apply -auto-approve
