@@ -43,6 +43,9 @@ def get_top_people_by_bmi():
                 
                 if mass_str == "unknown" or height_str == "unknown":
                     continue
+
+                mass_str = mass_str.replace(",", "")
+                height_str = height_str.replace(",", "")
                     
                 mass = float(mass_str)
                 height_cm = float(height_str)
